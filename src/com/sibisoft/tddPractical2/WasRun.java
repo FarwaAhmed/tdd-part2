@@ -13,12 +13,7 @@ public class WasRun extends TestCase{
 	public boolean wasRun() {
 		return wasRun;
 	}
-	public void run(){
-		testMethod();
-	}
-	public void testMethod(){
-		this.wasRun=true;
-	}
+	
 	/* For Debugging */
 	public String toString() {
 		return "\n wasRun = " + this.wasRun();
