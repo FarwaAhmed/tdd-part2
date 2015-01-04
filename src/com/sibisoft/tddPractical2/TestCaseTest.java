@@ -8,13 +8,13 @@ public class TestCaseTest {
 
 	@Test
 	public void testRunning() {
-		WasRun test= new WasRun("testMethod");
-		//System.out.print(test.toString());
+		WasRun test = new WasRun("testMethod");
+		System.out.print(test.toString());
 		assertFalse(test.wasRun());
 		
 		test.run();
-		//System.out.print(test.toString());
-		assertTrue(!test.wasRun());
+		System.out.print(test.toString());
+		assertTrue(test.wasRun());
 	}
 
 }

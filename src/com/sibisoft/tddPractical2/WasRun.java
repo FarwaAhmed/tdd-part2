@@ -14,6 +14,12 @@ public class WasRun extends TestCase{
 		return wasRun;
 	}
 	
+	public String testMethod(){
+		System.out.print("\n inside test method. testing reflection...  yes it works");
+		wasRun = true;
+		return "yes! "+this.getTestMethodName()+" ran";
+	}
+	
 	/* For Debugging */
 	public String toString() {
 		return "\n wasRun = " + this.wasRun();
