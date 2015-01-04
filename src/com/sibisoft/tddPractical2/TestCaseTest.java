@@ -18,7 +18,7 @@ public class TestCaseTest {
 		
 		test.run();
 		//System.out.print(test.toString());
-		assertTrue(test.wasRun());
+		assertEquals("setUp testMethod",test.getLog());
 	}
 	
 	@Test
