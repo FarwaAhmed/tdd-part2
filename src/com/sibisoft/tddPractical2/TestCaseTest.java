@@ -35,4 +35,11 @@ public class TestCaseTest {
 		test.run();
 		assertEquals("setUp testMethod tearDown ",test.getLog());
 	}
+	
+	@Test
+	public void testResult() {
+		WasRun test = new WasRun("testMethod");
+		TestResult testResult = test.run();
+		assertEquals("1 run, 0 failed",testResult.getSummary());
+	}
 }

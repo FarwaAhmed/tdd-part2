@@ -19,7 +19,8 @@ public class TestCase {
 		this.testMethodName = testMethodName;
 	}
 
-	public void run(){
+	public TestResult run(){
+		TestResult testResult = new TestResult();
 		try{
 			//System.out.print("\n test started");
 			setUp();
@@ -31,6 +32,7 @@ public class TestCase {
 		catch(Exception exp){
 			exp.getMessage();
 		}
+		return testResult;
 	}
 	
 	public void setUp() {
