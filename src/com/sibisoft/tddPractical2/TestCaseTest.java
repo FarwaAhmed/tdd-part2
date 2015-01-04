@@ -42,4 +42,15 @@ public class TestCaseTest {
 		TestResult testResult = test.run();
 		assertEquals("1 run, 0 failed",testResult.getSummary());
 	}
+	@Test
+	public void testFailedResult() {
+		try
+		{
+			WasRun test = new WasRun("testBrokenMethod"); 
+			TestResult testResult = test.run();
+			assertEquals("1 run, 1 failed",testResult.getSummary());
+		} catch (Exception ex){
+			fail("The test fails due to following reason: \n "+ ex.getMessage());
+		}
+	}
 }

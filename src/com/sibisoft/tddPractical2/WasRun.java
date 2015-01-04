@@ -41,6 +41,10 @@ public class WasRun extends TestCase{
 		return "yes! "+this.getTestMethodName()+" ran";
 	}
 	
+	public void testBrokenMethod()throws Exception{
+		throw new Exception("within testBrokenMethod method");
+	}
+	
 	/* For Debugging */
 	public String toString() {
 		return "\n wasRun = this.wasRun()" ;
