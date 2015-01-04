@@ -6,7 +6,8 @@ import org.junit.Test;
 
 public class TestCaseTest {
 
-	public WasRun setUp() {
+	
+	/*public WasRun setUp() {
 		return new WasRun("testMethod");
 	}
 	
@@ -26,6 +27,12 @@ public class TestCaseTest {
 		WasRun test = setUp();
 		test.run();
 		assertTrue(test.wasSetUp());
-	}
+	}*/
 
+	@Test
+	public void testTemplateMethod() {
+		WasRun test = new WasRun("testMethod");
+		test.run();
+		assertEquals("setUp testMethod tearDown ",test.getLog());
+	}
 }
