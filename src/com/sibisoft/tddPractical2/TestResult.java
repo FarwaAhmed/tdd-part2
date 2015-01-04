@@ -1,10 +1,14 @@
 package com.sibisoft.tddPractical2;
 
 public class TestResult {
-	private String summary = "1 run, 0 failed";
-
+	private int runCount;
+	private String summary;
+	
+	public TestResult(){
+		this.runCount = 1;
+	}
 	public String getSummary() {
-		return summary;
+		return  this.runCount + " run, 0 failed";//summary;
 	}
 	public void setSummary(String summary) {
 		this.summary = summary;
