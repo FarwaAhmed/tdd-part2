@@ -5,7 +5,10 @@ public class TestResult {
 	private String summary;
 	
 	public TestResult(){
-		this.runCount = 1;
+		this.runCount = 0;
+	}
+	public void testStarted(){
+		this.runCount += 1;
 	}
 	public String getSummary() {
 		return  this.runCount + " run, 0 failed";//summary;

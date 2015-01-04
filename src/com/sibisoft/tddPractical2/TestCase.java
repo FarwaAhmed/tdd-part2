@@ -23,6 +23,7 @@ public class TestCase {
 		TestResult testResult = new TestResult();
 		try{
 			//System.out.print("\n test started");
+			testResult.testStarted();
 			setUp();
 			//toDefineReflection();
 			Method method = this.getClass().getMethod(testMethodName);
