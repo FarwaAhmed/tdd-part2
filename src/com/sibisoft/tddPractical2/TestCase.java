@@ -19,8 +19,8 @@ public class TestCase {
 		this.testMethodName = testMethodName;
 	}
 
-	public TestResult run(){
-		TestResult testResult = new TestResult();
+	public TestResult run(TestResult testResult){
+		// TestResult testResult = new TestResult();
 		//System.out.print("\n test started");
 		testResult.testStarted();
 		setUp();

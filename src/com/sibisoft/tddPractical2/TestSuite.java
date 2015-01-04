@@ -12,12 +12,10 @@ public class TestSuite {
 	public void addTest(WasRun test){
 		tests.add(test);
 	}
-	public TestResult run(){
-		TestResult testResult = new TestResult();
+	public void run(TestResult testResult){
 		for(int count = 0 ; count < tests.size() ; count ++){
 			WasRun test = (WasRun) tests.get(count);
-			test.run();
+			test.run(testResult);
 		}
-		return testResult;
 	}
 }
