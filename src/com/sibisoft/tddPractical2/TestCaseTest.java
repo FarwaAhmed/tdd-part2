@@ -53,4 +53,12 @@ public class TestCaseTest {
 			fail("The test fails due to following reason: \n "+ ex.getMessage());
 		}
 	}
+	
+	@Test
+	public void testFailedResultFormatting() {
+		TestResult testResult = new TestResult();
+		testResult.testStarted();
+		testResult.testFailed();
+		assertEquals("1 run, 1 failed",testResult.getSummary());
+	}
 }

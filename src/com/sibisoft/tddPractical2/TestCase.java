@@ -21,18 +21,20 @@ public class TestCase {
 
 	public TestResult run(){
 		TestResult testResult = new TestResult();
+		//System.out.print("\n test started");
+		testResult.testStarted();
+		setUp();
+		
 		try{
-			//System.out.print("\n test started");
-			testResult.testStarted();
-			setUp();
 			//toDefineReflection();
 			Method method = this.getClass().getMethod(testMethodName);
 			method.invoke(this);
-			tearDown();
 		}
 		catch(Exception exp){
 			exp.getMessage();
+			testResult.testFailed();
 		}
+		tearDown();
 		return testResult;
 	}
 	
