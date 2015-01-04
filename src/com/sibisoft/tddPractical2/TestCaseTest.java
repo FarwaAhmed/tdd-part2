@@ -16,5 +16,12 @@ public class TestCaseTest {
 		System.out.print(test.toString());
 		assertTrue(test.wasRun());
 	}
+	
+	@Test
+	public void testSetup() {
+		WasRun test = new WasRun("testMethod");
+		test.run();
+		assertTrue(test.wasSetUp());
+	}
 
 }

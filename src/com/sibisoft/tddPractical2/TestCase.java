@@ -21,6 +21,7 @@ public class TestCase {
 
 	public void run(){
 		try{
+			setUp();
 			//toDefineReflection();
 			Method method = this.getClass().getMethod(testMethodName);
 			method.invoke(this);
@@ -28,6 +29,10 @@ public class TestCase {
 		catch(Exception exp){
 			exp.getMessage();
 		}
+	}
+	
+	public void setUp() {
+		// pass: In python : The pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action
 	}
 	
 	/* For Learning purpose */
