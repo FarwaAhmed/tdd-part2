@@ -1,6 +1,7 @@
 package com.sibisoft.tddPractical2;
 
 import static org.junit.Assert.*;
+import com.sibisoft.tddPractical2.TestSuite;
 
 import org.junit.Test;
 
@@ -60,5 +61,16 @@ public class TestCaseTest {
 		testResult.testStarted();
 		testResult.testFailed();
 		assertEquals("1 run, 1 failed",testResult.getSummary());
+	}
+	@Test
+	public void testSuite() {
+		TestResult testResult = new TestResult();
+		
+		TestSuite suite = new TestSuite();
+		suite.addTest(new WasRun("testMethod"));
+		suite.addTest(new WasRun("testBrokenMethod"));
+		
+		testResult = suite.run();
+		assertEquals("2 run, 1 failed",testResult.getSummary());
 	}
 }
